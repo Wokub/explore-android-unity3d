@@ -17,7 +17,7 @@ All you have to do is opening folder with downloaded files through Unity3D creat
 
 ## Authors
 
-* **Wojciech Kubiak** - [Wojciech Kubiak](https://github.com/Wokub)
+* **Wojciech Kubiak** - [Wokub](https://github.com/Wokub)
 
 
 ## License
