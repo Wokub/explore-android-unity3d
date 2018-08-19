@@ -8,7 +8,7 @@ To make everything work you need Unity3D (v. 5.6.6f works like a charm) and Andr
 
 ### How To
 
-All you have to do is opening folder downloaded files through Unity3D creator.
+All you have to do is opening folder with downloaded files through Unity3D creator.
 
 ## Built With
 
