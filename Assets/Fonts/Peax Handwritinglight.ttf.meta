@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 14f9b182de4a01c4fbc56b704927f23a
+timeCreated: 1525721752
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Peaxhandwritinglight
+  fontNames:
+  - Peaxhandwritinglight
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

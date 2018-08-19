@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: e466064dd38dd444d879c958eb421b65
+timeCreated: 1525721757
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Fibel Sued Kontur
+  fontNames:
+  - Fibel Sued Kontur
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
