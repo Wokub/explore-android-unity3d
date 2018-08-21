@@ -81,7 +81,7 @@ public class GameCtrl : MonoBehaviour {
 	public void RefreshUI()
 	{
 		txtCoinCount.text = " x " + data.coinCount;
-		txtScore.text = "Your Score " + data.score;
+		txtScore.text = "" + data.score;
 	}
 
 	/// <summary>
@@ -110,7 +110,7 @@ public class GameCtrl : MonoBehaviour {
 		data.coinCount = 0;
 		txtCoinCount.text = " x 0";
 		data.score = 0;
-		txtScore.text = "Your Score ";
+		txtScore.text = "";
 	}
 
 
@@ -227,7 +227,7 @@ public class GameCtrl : MonoBehaviour {
 	public void UpdateScore(int value)
 	{
 		data.score += value;
-		txtScore.text = "Your Score " + data.score;
+		txtScore.text = "" + data.score;
 	}
 
 	/// <summary>
@@ -246,10 +246,10 @@ public class GameCtrl : MonoBehaviour {
 	{
 		timeLeft -= Time.deltaTime;
 
-		ui.txtTimer.text = "Time: " + (int)timeLeft;
+		ui.txtTimer.text = "" + (int)timeLeft;
 
 		if (timeLeft <= 0) {
-			ui.txtTimer.text = "Time: 0";
+			ui.txtTimer.text = "0";
 
 			//na prezentacje
 			Invoke("GameOver", restartDelay);
