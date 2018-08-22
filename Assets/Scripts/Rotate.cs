@@ -13,6 +13,6 @@ public class Rotate : MonoBehaviour {
 
     void Update()
     {
-        trans.Rotate(0, 0, -2); //if he is, then rotate clockwise in the x axis
+        trans.Rotate(0, 0, -4); //if he is, then rotate clockwise in the x axis
     }
 }

@@ -79,7 +79,7 @@ public class PlayerCtrl : MonoBehaviour
 			FireBullets ();
 		}
 	
-		arrows.text = "Arrows: " + availableBullets;
+		arrows.text = "" + availableBullets;
 	}
 
 	void OnDrawGizmos()
