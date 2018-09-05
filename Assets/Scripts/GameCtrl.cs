@@ -36,7 +36,6 @@ public class GameCtrl : MonoBehaviour {
 	//BinaryFormatter bf; //saving/loading bin files
 
 	float timeLeft;
-	float levelInfoTime;
 	public bool timerOn;
 
 
@@ -298,7 +297,6 @@ public class GameCtrl : MonoBehaviour {
 		ui.panelWon.SetActive (false);
 		ui.playerKeyboard.SetActive (true);
 		ui.topHUD.SetActive (true);
-		ui.levelInfo.SetActive (false);
 	}
 
 	public void bossBars()

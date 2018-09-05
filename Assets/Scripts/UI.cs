@@ -20,7 +20,6 @@ public class UI
 	public GameObject playerKeyboard;
 	public GameObject topHUD;
 	public GameObject panelWon;
-	public GameObject levelInfo;
 	public GameObject bossHealthBar;
 	//na prezentacje
 }
