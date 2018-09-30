@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+//using UnityEditorInternal;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
@@ -7,10 +8,9 @@ using UnityEngine.SceneManagement;
 public class BtnCtrl : MonoBehaviour {
 	public GameObject Loading;
 	public GameObject UI;
-	public GameObject ComingSoonSign;
-	public GameObject CSBackground;
+    public GameObject Levels;
 
-	int levelNumber;
+    int levelNumber;
 	Button btn;
 	Image btnImg;
 
@@ -81,8 +81,7 @@ public class BtnCtrl : MonoBehaviour {
 	{
 		Loading.SetActive (true);
 		UI.SetActive (false);
-		ComingSoonSign.SetActive (false);
-		CSBackground.SetActive (false);
+        Levels.SetActive(false);
 		SceneManager.LoadScene(sceneName);
 	}
 }

@@ -7,8 +7,12 @@ using DG.Tweening;
 /// <summary>
 /// Level complete ctrl.
 /// </summary>
-public class LevelCompleteCtrl : MonoBehaviour {
+public class LevelCompleteCtrl : MonoBehaviour
+{
 
+    public GameObject oneStar;
+    public GameObject twoStars;
+    public GameObject threeStars;
 	public Button btnNext;
 	public Sprite goldenStar;
 	public Image Star1;
@@ -49,9 +53,10 @@ public class LevelCompleteCtrl : MonoBehaviour {
 			Invoke ("ShowGoldenStars", animStartDelay);
 		}
 	
-		if (score <= ScoreForOneStar && score != 0) {
-			GameCtrl.instance.SetStarsAwarded (levelNumber, 1);
-			Invoke ("ShowGoldenStars", animStartDelay);
+		if (score <= ScoreForOneStar && score != 0)
+		{
+		    GameCtrl.instance.SetStarsAwarded(levelNumber, 1);
+            Invoke ("ShowGoldenStars", animStartDelay);
 		}
 	}
 
@@ -60,7 +65,8 @@ public class LevelCompleteCtrl : MonoBehaviour {
 	}
 
 	IEnumerator HandleFirstStarAnim(Image starImg){
-		doAnim (starImg);
+	    oneStar.SetActive(true);
+        doAnim (starImg);
 		yield return new WaitForSeconds (animDelay);
 
 		if (showTwoStars || showThreeStars)
@@ -70,7 +76,8 @@ public class LevelCompleteCtrl : MonoBehaviour {
 	}
 
 	IEnumerator HandleSecondStarAnim(Image starImg){
-		doAnim (starImg);
+	    twoStars.SetActive(true);
+        doAnim (starImg);
 
 		yield return new WaitForSeconds (animDelay);
 
@@ -81,7 +88,8 @@ public class LevelCompleteCtrl : MonoBehaviour {
 	}
 
 	IEnumerator HandleThirdStarAnim(Image starImg){
-		doAnim (starImg);
+	    threeStars.SetActive(true);
+        doAnim (starImg);
 
 		yield return new WaitForSeconds (animDelay);
 

@@ -12,8 +12,11 @@ public class MenuCtrl : MonoBehaviour
 	public GameObject MenuHUD;
 	public GameObject CreditsHUD;
 	public GameObject LoadingPanel;
+    public GameObject Levels;
+    public GameObject Logo;
+    public GameObject MainButton;
 
-	public void LoadScene(string sceneName)
+    public void LoadScene(string sceneName)
 	{
 		SceneManager.LoadScene (sceneName);
 	}
@@ -27,7 +30,7 @@ public class MenuCtrl : MonoBehaviour
 		LoadingPanel.SetActive (true);
 		SceneManager.LoadScene (sceneName);
 	}
-
+    
 	public void LoadCredits()
 	{
 		MenuHUD.SetActive (false);
@@ -39,4 +42,22 @@ public class MenuCtrl : MonoBehaviour
 		MenuHUD.SetActive (true);
 		CreditsHUD.SetActive (false);
 	}
+
+    public void LoadLevel()
+    {
+        MenuHUD.SetActive(false);
+        CreditsHUD.SetActive(false);
+        Levels.SetActive(true);
+        Logo.SetActive(false);
+        MainButton.SetActive(false);
+    }
+
+    public void LeaveLevels()
+    {
+        MenuHUD.SetActive(true);
+        CreditsHUD.SetActive(false);
+        Levels.SetActive(false);
+        Logo.SetActive(true);
+        MainButton.SetActive(true);
+    }
 }

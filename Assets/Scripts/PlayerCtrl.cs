@@ -18,7 +18,7 @@ public class PlayerCtrl : MonoBehaviour
 	public float boxHeight;
 	public int availableBullets;
 
-	public bool isGrounded;
+    	public bool isGrounded;
 	public Transform feet;
 	public float feetRadius;
 	public LayerMask whatIsGround;
@@ -96,20 +96,25 @@ public class PlayerCtrl : MonoBehaviour
 		else if(playerSpeed > 0)
 			sr.flipX = false;
 
-		if (!isJumping)
-			anim.SetInteger ("State", 1);
+	    if (!isJumping)
+	    {
+	        anim.SetInteger("State", 1); 
+	    }
+			
 
 	}
 
-	void StopMoving() 
-	{
-		rb.velocity = new Vector2 (0, rb.velocity.y);
+    void StopMoving()
+    {
+        rb.velocity = new Vector2(0, rb.velocity.y);
 
-		if(!isJumping && !isFiring)
-			anim.SetInteger ("State", 0);
-	}
+        if (!isJumping && !isFiring)
+        {
+            anim.SetInteger("State", 0);
+        }
+    }
 
-	void showFalling()
+    void showFalling()
 	{
 		if (rb.velocity.y < 0) 
 		{
@@ -125,7 +130,7 @@ public class PlayerCtrl : MonoBehaviour
 			rb.AddForce (new Vector2 (0, jumpSpeed));
 			anim.SetInteger ("State", 2);
 
-			AudioCtrl.instance.PlayerJump (gameObject.transform.position);
+            AudioCtrl.instance.PlayerJump (gameObject.transform.position);
 		}
 	}
 

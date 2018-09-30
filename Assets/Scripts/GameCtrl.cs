@@ -12,7 +12,7 @@ using System.Runtime.Serialization.Formatters.Binary; //allows to use Serializat
 public class GameCtrl : MonoBehaviour {
 	
 	public static GameCtrl instance;
-
+    
 	public Text txtCoinCount;
 	public Text txtScore;
 
@@ -28,6 +28,9 @@ public class GameCtrl : MonoBehaviour {
 	public GameObject bossWall;
 	public GameObject player;
 	public GameObject firstBoss;
+   	public GameObject mainSound;
+    	public GameObject winSound;
+    	public GameObject loseSound;
 
 	public UI ui;
 	public bool lost;
@@ -283,13 +286,17 @@ public class GameCtrl : MonoBehaviour {
 		ui.panelGameOver.SetActive (true);
 		ui.playerKeyboard.SetActive (false);
 		ui.topHUD.SetActive (false);
-	}
+	    mainSound.SetActive(false);
+	    loseSound.SetActive(true);
+    }
 
 	public void Won()
 	{
 		ui.panelWon.SetActive (true);
 		ui.playerKeyboard.SetActive (false);
 		ui.topHUD.SetActive (false);
+        mainSound.SetActive(false);
+        winSound.SetActive(true);
 	}
 
 	void HUDVisibility()
